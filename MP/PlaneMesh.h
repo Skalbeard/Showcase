@@ -1,0 +1,21 @@
+// PlaneMesh.h
+#ifndef _PLANEMESH_H_
+#define _PLANEMESH_H_
+
+
+#include "BaseMesh.h"
+
+
+class PlaneMesh : public BaseMesh
+{
+
+public:
+	PlaneMesh(ID3D11Device* device, WCHAR* textureFilename, int resolution);
+	~PlaneMesh();
+
+protected:
+	void InitBuffers(ID3D11Device* device);
+	int m_resolution;
+};
+
+#endif

@@ -1,0 +1,22 @@
+// CubeMesh.h
+// Generates a cube mesh.
+#ifndef _CUBEMESH_H_
+#define _CUBEMESH_H_
+
+
+#include "BaseMesh.h"
+
+
+class CubeMesh : public BaseMesh
+{
+
+public:
+	CubeMesh(ID3D11Device* device, WCHAR* textureFilename, int resolution = 20);
+	~CubeMesh();
+
+protected:
+	void InitBuffers(ID3D11Device* device);
+	int m_resolution;
+};
+
+#endif
